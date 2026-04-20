@@ -1,41 +1,26 @@
-/* Design Token */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 :root {
-  /* Reference Token */
-  /* Colors */
-  /* Primary Purple */
-  --purple-100: #f9f9fe;
-  --purple-200: #cfcafa;
-  --purple-300: #a69bf6;
-  --purple-400: #7c6cf2;
-  --purple-500: #523dee;
-  --purple-600: #2d14e4;
-  --purple-700: #2410b5;
-  --purple-800: #1a0c86;
-  --purple-900: #110857;
+  /* colors */
+  --orange-100: #ffece5;
+  --orange-200: #ffdbcc;
+  --orange-300: #ffc7b3;
+  --orange-400: #ffb599;
+  --orange-500: #ffa281;
+  --orange-600: #ff8f66;
+  --orange-700: #ff7d4d;
+  --orange-800: #ff581b;
+  --orange-900: #ff4500;
 
-  /* Gray */
   --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-400: #6e747e;
-  --gray-600: #4b5563;
-  --gray-900: #111827;
+  --gray-500: #7f7e7e;
+  --gray-600: #454545;
+  --gray-900: #111111;
 
-  /* Sementic */
-  --success-default: #22c55e;
-  --success-bg: #ecfdf5;
-  --success-text: #166534;
-  --error-default: #ef4444;
-  --error-bg: #fef2f2;
-  --error-text: #991b1b;
-  --warning-default: #f59e0b;
-  --warning-bg: #fffbeb;
-  --warning-text: #92400e;
-  --info-default: #3b82f6;
-  --info-bg: #eff6ff;
-  --info-text: #1e3a8a;
+  --white: #ffffff;
+  --black: #000000;
 
-  /* Spacing */
+  /* spacing */
   --spacing-4: 4px;
   --spacing-8: 8px;
   --spacing-12: 12px;
@@ -43,8 +28,10 @@
   --spacing-18: 18px;
   --spacing-20: 20px;
   --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
 
-  /* Font Size */
+  /* font-size */
   --font-sm: 14px;
   --font-md: 16px;
   --font-lg: 18px;
@@ -53,90 +40,383 @@
   --font-3xl: 24px;
   --font-4xl: 28px;
   --font-5xl: 36px;
-  --font-6xl: 48px;
-
-  /* System Token */
-  /* Background */
-  --color-bg-primary: var(--gray-50);
-  --color-bg-inverse: var(--gray-900);
-
-  /* Text */
-  --color-text-primary: var(--gray-900);
-  --color-text-inverse: var(--gray-50);
-
-  /* Accent */
-  --accent-primary-default: #f97316;
-  --accent-primary-soft: #fff7ed;
-  --accent-primary-text: #9a3412;
-  --accent-purple-soft: #f1f0ff;
-  --accent-purple-text: #5b4fe0;
-
-  /* Responsive */
-  /* Layout Spacing */
-  --layout-padding-sm: 16px;
-  --layout-padding-md: 24px;
-
-  /* Container */
-  --container-max: 1280px;
 }
 
-/* css 리셋 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html {
-}
+
 body {
-  overflow-x: hidden;
-  background-color: var(--color-bg-primary);
-  font-size: var(--font-md);
-  color: var(--color-text-primary);
-}
-ul,
-li {
-  list-style: none;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-img {
-  border: 0;
-  vertical-align: middle;
+  font-family: "Pretendard", sans-serif;
+  color: var(--gray-900);
+  background-color: #f5f5f5;
 }
 
-/* Component Token */
-/* Layout */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
 .layout {
-  position: relative;
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.outlet {
-  position: relative;
-  width: 100%;
-  max-width: var(--container-max);
-  flex: 1;
-  background-color: #d4d4d4;
 }
 
-@media screen and (min-width: 320px) {
-  .layout {
-    padding: 0 16px;
-  }
+.container {
+  width: 100%;
+  min-width: 375px;
+  max-width: 767px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+  background-color: #ffffff;
 }
+
+/* 모바일 기본 */
+.onboarding {
+  min-height: calc(100vh - 52px);
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 375 / 160;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.text-box {
+  margin-top: 32px;
+}
+.text-box h1 {
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 700;
+  margin-bottom: 12px;
+  word-break: keep-all;
+}
+
+.text-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray-600);
+  word-break: keep-all;
+}
+
+.btn-group {
+  margin-top: auto;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  border-radius: 12px;
+  background-color: var(--orange-900);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.button-outline {
+  background-color: #fff;
+  color: var(--orange-900);
+  border: 1px solid var(--orange-900);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* 태블릿: 768 ~ 1023 */
 @media screen and (min-width: 768px) {
-  .layout {
-    padding: 0 24px;
+  .container {
+    min-width: 768px;
+    max-width: 1023px;
+    padding: 24px 24px 40px;
+  }
+
+  .thumbnail {
+    margin-bottom: 32px;
+  }
+
+  .text-box h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .text-box p {
+    font-size: 17px;
+  }
+
+  .button {
+    height: 56px;
+    font-size: 17px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
+
+/* 데스크탑: 1024 ~ 1920 */
 @media screen and (min-width: 1024px) {
-  .layout {
-    padding: 0;
+  .container {
+    min-width: 1024px;
+    max-width: 1920px;
+    padding: 32px 40px 48px;
   }
+
+  .thumbnail {
+    margin-bottom: 40px;
+  }
+
+  .text-box {
+    padding: 0 24px;
+    margin-top: 24px;
+  }
+
+  .btn-group {
+    padding: 0 24px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .button {
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* signup-1 */
+/* 모바일 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+  --orange-900: #ff5a0a;
+  --gray-100: #f5f5f5;
+  --gray-300: #d9d9d9;
+  --gray-400: #b8b8b8;
+  --gray-500: #8b8b8b;
+  --gray-700: #454545;
+  --gray-900: #111111;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  background: #3f3f3f;
+  color: var(--gray-900);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.layout {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 375px;
+  min-height: 812px;
+  margin: 0 auto;
+  background: var(--gray-100);
+}
+
+/* 공통 버튼 */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 16px;
+  background: var(--orange-900);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--gray-900);
+  border: 1px solid #8f8f8f;
+}
+
+/* 로그인 페이지 */
+.login-page {
+  min-height: 812px;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 24px 32px;
+}
+
+.login-content {
+  flex: 1;
+}
+
+.login-header {
+  margin-bottom: 40px;
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+
+.login-desc {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--gray-900);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group {
+  width: 100%;
+  height: 64px;
+  border: 1px solid var(--gray-400);
+  border-radius: 16px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.input-label {
+  flex-shrink: 0;
+  min-width: 74px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.input-group input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: var(--gray-900);
+}
+
+.input-group input::placeholder {
+  color: var(--gray-400);
+}
+
+.login-submit {
+  margin-top: 14px;
+}
+
+.sns-login {
+  margin-top: 44px;
+  text-align: center;
+}
+
+.sns-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.sns-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.sns-item {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sns-item img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.login-footer {
+  padding-top: 40px;
+}
+
+.join-button {
+  height: 60px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
 }
