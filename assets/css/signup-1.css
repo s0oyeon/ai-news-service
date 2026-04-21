@@ -1,0 +1,156 @@
+.signup-1-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.signup-content {
+  flex: 1;
+  padding-top: 56px;
+  padding-bottom: 28px;
+}
+
+.signup-header {
+  margin-bottom: 40px;
+}
+
+.signup-title.h1 {
+  font-size: var(--font-4xl);
+  font-weight: 700;
+  line-height: 1.34;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+
+.signup-desc.p {
+  font-size: var(--font-xs);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-black);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: 0 20px;
+  background: transparent;
+}
+
+.form-label {
+  flex-shrink: 0;
+  min-width: 86px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.form-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: var(--color-black);
+}
+
+.form-input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.signup-submit {
+  margin-top: 8px;
+}
+
+.sns-login {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.sns-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.sns-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.sns-item {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sns-item img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.signup-footer {
+  padding-bottom: 28px;
+}
+
+.signup-join-btn {
+  height: 60px;
+  border-radius: var(--radius-pill);
+  border: 1px solid #8f8f8f;
+  color: var(--color-black);
+}
+
+@media (max-width: 374px) {
+  .signup-content {
+    padding-top: 44px;
+    padding-bottom: 24px;
+  }
+
+  .signup-header {
+    margin-bottom: 32px;
+  }
+
+  .signup-title {
+    margin-bottom: 22px;
+  }
+
+  .form-field {
+    height: 58px;
+    padding: 0 16px;
+  }
+
+  .form-label,
+  .form-input,
+  .sns-title {
+    font-size: 15px;
+  }
+
+  .sns-list {
+    gap: 18px;
+  }
+
+  .sns-item,
+  .sns-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .signup-join-btn {
+    height: 56px;
+  }
+}
