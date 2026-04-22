@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 | AI 뉴스 서비스 앱</title>
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/signup-2.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <div class="container">
+        <main class="signup-2-page">
+          <header class="signup-2-header">
+            <a href="signup-1.html" class="back-button" aria-label="뒤로가기">
+              <span></span>
+            </a>
+            <h1 class="signup-2-title">회원가입</h1>
+          </header>
+
+          <section class="signup-2-content">
+            <form class="signup-form">
+              <div class="form-group">
+                <label for="user-id" class="form-label">아이디(이메일)</label>
+                <div class="input-row">
+                  <input
+                    type="email"
+                    id="user-id"
+                    name="user-id"
+                    placeholder="user1234@example.com"
+                  />
+                  <button type="button" class="line-button">중복확인</button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password" class="form-label">비밀번호</label>
+                <div class="input-row input-row-single">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="특수기호 포함 8글자 이상"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password-check" class="form-label"
+                  >비밀번호 확인</label
+                >
+                <div class="input-row input-row-single">
+                  <input
+                    type="password"
+                    id="password-check"
+                    name="password-check"
+                    placeholder="비밀번호 확인"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="user-name" class="form-label">이름</label>
+                <div class="input-row input-row-single">
+                  <input
+                    type="text"
+                    id="user-name"
+                    name="user-name"
+                    placeholder="이름 입력"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">휴대폰 번호</label>
+                <div class="input-row input-row-single">
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="'-' 구분없이 입력"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="verify-number" class="form-label">인증번호</label>
+                <div class="input-row">
+                  <input
+                    type="text"
+                    id="verify-number"
+                    name="verify-number"
+                    placeholder="인증번호 입력"
+                  />
+                  <button type="button" class="line-button">
+                    인증번호 전송
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="birth" class="form-label">생년월일</label>
+                <div class="input-row input-row-single">
+                  <input
+                    type="text"
+                    id="birth"
+                    name="birth"
+                    placeholder="8자리 입력 (예)20020321"
+                  />
+                </div>
+              </div>
+
+              <div class="gender-group">
+                <label class="radio-item">
+                  <input type="radio" name="gender" value="female" />
+                  <span class="custom-radio"></span>
+                  <span class="radio-text">여성</span>
+                </label>
+
+                <label class="radio-item">
+                  <input type="radio" name="gender" value="male" />
+                  <span class="custom-radio"></span>
+                  <span class="radio-text">남성</span>
+                </label>
+              </div>
+
+              <div class="agree-section">
+                <label class="check-item check-item-all">
+                  <input type="checkbox" name="agree-all" />
+                  <span class="custom-check"></span>
+                  <span class="check-text strong">모두 동의합니다</span>
+                </label>
+
+                <div class="agree-list">
+                  <label class="check-item">
+                    <input type="checkbox" name="agree-terms" />
+                    <span class="custom-check"></span>
+                    <span class="check-text">이용약관 동의</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="agree-privacy" />
+                    <span class="custom-check"></span>
+                    <span class="check-text">개인정보 취급방침 동의</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="agree-marketing" />
+                    <span class="custom-check"></span>
+                    <span class="check-text">마케팅 정보 수신 동의</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </section>
+
+          <div class="signup-submit-wrap">
+            <button type="submit" class="signup-submit-btn">
+              회원가입 하기
+            </button>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
