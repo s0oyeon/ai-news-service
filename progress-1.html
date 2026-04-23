@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>관심 분야 선택 | AI 뉴스 서비스 앱</title>
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/progress-1.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <div class="container">
+        <main class="progress-page">
+          <header class="progress-header">
+            <a href="signup-2.html" class="back-button" aria-label="뒤로가기">
+              <span></span>
+            </a>
+            <h1 class="page-title">관심 분야</h1>
+          </header>
+
+          <div class="progress-bar-wrap" aria-label="진행률">
+            <div class="progress-bar">
+              <span class="progress-step progress-step-active"></span>
+              <span class="progress-step"></span>
+            </div>
+          </div>
+
+          <section class="progress-content">
+            <div class="title-wrap">
+              <h2 class="section-title">관심 분야를 선택해 주세요</h2>
+              <p class="section-desc">
+                복수선택 가능 <span id="count-text">(0/5)</span>
+              </p>
+            </div>
+
+            <div class="interest-list">
+              <button type="button" class="interest-card">
+                <strong class="interest-title">경제/투자</strong>
+                <p class="interest-desc">국내외 증시, 금리, 자산 관리</p>
+              </button>
+
+              <button type="button" class="interest-card">
+                <strong class="interest-title">환경/ESG</strong>
+                <p class="interest-desc">
+                  탄소 중립, 친환경 에너지, 지속가능성
+                </p>
+              </button>
+
+              <button type="button" class="interest-card">
+                <strong class="interest-title">테크/IT</strong>
+                <p class="interest-desc">AI, 반도체, 미래 모빌리티</p>
+              </button>
+
+              <button type="button" class="interest-card">
+                <strong class="interest-title">유통/소비</strong>
+                <p class="interest-desc">리테일 전략, 마케팅 트렌드</p>
+              </button>
+
+              <button type="button" class="interest-card">
+                <strong class="interest-title">라이프스타일</strong>
+                <p class="interest-desc">워크앤라이프, 자기계발</p>
+              </button>
+            </div>
+          </section>
+
+          <div class="next-button-wrap">
+            <a href="progress-2.html" class="next-button">다음</a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      const cards = document.querySelectorAll(".interest-card");
+      const countText = document.getElementById("count-text");
+      const maxCount = 5;
+
+      function updateCount() {
+        const selectedCount = document.querySelectorAll(
+          ".interest-card.is-selected",
+        ).length;
+        countText.textContent = `(${selectedCount}/${maxCount})`;
+      }
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("is-selected");
+          updateCount();
+        });
+      });
+
+      updateCount();
+    </script>
+  </body>
+</html>

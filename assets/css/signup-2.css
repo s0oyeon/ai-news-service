@@ -52,8 +52,8 @@
 }
 
 .signup-2-title {
-  font-size: var(--font-2xl);
-  font-weight: 700;
+  font-size: var(--font-lg);
+  font-weight: 600;
   line-height: 1;
   color: var(--color-black);
 }
@@ -74,8 +74,8 @@
 .form-label {
   display: block;
   margin-bottom: 12px;
-  font-size: var(--font-lg);
-  font-weight: 700;
+  font-size: var(--font-xs);
+  font-weight: 500;
   line-height: 1.4;
   color: var(--color-black);
 }
@@ -112,15 +112,15 @@
 
 .line-button {
   flex-shrink: 0;
-  min-width: 68px;
-  height: 28px;
+  min-width: 53px;
+  height: 21px;
   padding: 0 14px;
   border: none;
   border-radius: 999px;
   background: var(--color-primary);
   color: var(--color-white);
-  font-size: 11px;
-  font-weight: 700;
+  font-size: var(--font-3xs);
+  font-weight: 300;
   cursor: pointer;
 }
 
@@ -224,8 +224,8 @@
 }
 
 .check-text.strong {
-  font-size: var(--font-xl);
-  font-weight: 700;
+  font-size: var(--font-md);
+  font-weight: 500;
   color: var(--color-black);
 }
 
@@ -236,17 +236,16 @@
 
 .signup-submit-btn {
   width: 100%;
-  height: 60px;
+  height: 46px;
   border: none;
   border-radius: 16px;
   background: var(--color-primary);
   color: var(--color-white);
-  font-size: var(--font-xl);
-  font-weight: 700;
+  font-size: var(--font-sm);
+  font-weight: 500;
   cursor: pointer;
 }
 
-/* tablet */
 @media (min-width: 768px) {
   .signup-2-page {
     padding-top: 40px;

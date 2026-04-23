@@ -172,7 +172,6 @@
   background: transparent;
 }
 
-/* 376px ~ 767px */
 @media (min-width: 376px) and (max-width: 767px) {
   .container {
     padding-left: 28px;
