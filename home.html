@@ -4,160 +4,164 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>홈 | AI 뉴스 서비스 앱</title>
-    <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/home.css" />
   </head>
+
   <body>
-    <div class="layout">
-      <div class="container">
-        <main class="home-page">
-          <section class="home-intro">
-            <h1 class="home-title">좋은 아침이에요, ○○님!</h1>
-            <p class="home-desc">
-              오늘 출근길, 1분 안에 파악하는<br />
-              경제·환경 키워드 5가지입니다
+    <div class="app">
+      <main class="home-page">
+        <section class="home-header">
+          <h1>좋은 아침이에요, ㅇㅇ님!</h1>
+          <p>
+            오늘 출근길, 1분 안에 파악하는<br />
+            경제·환경 키워드 5가지입니다
+          </p>
+        </section>
+
+        <section class="news-list">
+          <!-- 1 -->
+          <article class="news-item">
+            <h2>[에코-에너지 인베스트먼트]</h2>
+            <p class="news-summary">
+              ✨ 관심 있으신 <span>#친환경</span> 섹터의 이번 달 가장 중요한
+              변수가 될 거예요
             </p>
-          </section>
 
-          <section class="news-list">
-            <!-- 1 -->
-            <article class="news-item">
-              <h2 class="news-section-title">[에코-에너지 인베스트먼트]</h2>
-              <p class="news-summary">
-                <img
-                  src="assets/icons/star(sm-m).png"
-                  alt=""
-                  class="star-icon"
-                />
-                관심 있으신 <span class="highlight">#친환경</span> 섹터의 이번
-                달 가장 중요한 변수가 될 거예요
-              </p>
-
-              <a href="detail-1.html" class="news-card">
-                <img src="assets/image/card1(sm).png" class="news-image" />
-                <div class="news-card-body">
-                  <h3 class="news-card-title">
-                    EU 탄소국경세(CBAM) 본격화, 철강주 비상?
-                  </h3>
-                  <p class="news-card-desc">
-                    철강주 들고 계신가요?<br />
-                    지금 바로 확인해야 할 탄소국경세 대응 시나리오
-                  </p>
-                  <div class="tag-list">
-                    <span class="tag">#환경 / ESG</span>
-                    <span class="tag">#해외경제</span>
-                    <span class="tag">#투자전략</span>
-                  </div>
+            <a href="detail-1.html" class="news-card">
+              <img src="assets/image/card1(sm).png" alt="" />
+              <div class="card-body">
+                <h3>EU 탄소국경세(CBAM) 본격화, 철강주 비상?</h3>
+                <p>
+                  철강주 들고 계신가요?<br />
+                  지금 바로 확인해야 할 탄소국경세 대응 시나리오
+                </p>
+                <div class="tag-list">
+                  <span>#환경 / ESG</span>
+                  <span>#해외경제</span>
+                  <span>#투자전략</span>
                 </div>
-              </a>
-            </article>
+              </div>
+            </a>
+          </article>
 
-            <!-- 2 -->
-            <article class="news-item">
-              <h2 class="news-section-title">
-                [전기차 2.0 시대를 여는 배터리]
-              </h2>
-              <p class="news-summary">
-                <img src="assets/image/star(sm-m).png" class="star-icon" />
-                최근 검색하신 <span class="highlight">#전고체 배터리</span> 기술
-              </p>
+          <!-- 2 -->
+          <article class="news-item">
+            <h2>[전기차 2.0 시대를 여는 배터리]</h2>
+            <p class="news-summary">
+              ✨ 최근 검색하신 <span>#전고체 배터리</span> 기술의 상용화 시점이
+              앞당겨졌어요
+            </p>
 
-              <a href="detail-2.html" class="news-card">
-                <img src="assets/image/card2(sm).png" class="news-image" />
-                <div class="news-card-body">
-                  <h3 class="news-card-title">
-                    '꿈의 배터리' 전고체, 상용화 앞당기는 K-배터리
-                  </h3>
-                  <p class="news-card-desc">
-                    삼성SDI와 LG엔솔의 로드맵 발표.<br />
-                    핵심 기술은 무엇일까요?
-                  </p>
-                  <div class="tag-list">
-                    <span class="tag">#테크/IT</span>
-                    <span class="tag">#배터리</span>
-                    <span class="tag">#미래모빌리티</span>
-                  </div>
+            <a href="#" class="news-card">
+              <img src="assets/image/card2(sm).png" alt="" />
+              <div class="card-body">
+                <h3>‘꿈의 배터리’ 전고체, 상용화 앞당기는 K-배터리</h3>
+                <p>
+                  삼성SDI와 LG엔솔의 로드맵 발표.<br />
+                  배터리 대장주들의 운명을 바꿀 핵심 기술은 무엇일까요?
+                </p>
+                <div class="tag-list">
+                  <span>#테크/IT</span>
+                  <span>#배터리</span>
+                  <span>#미래모빌리티</span>
                 </div>
-              </a>
-            </article>
+              </div>
+            </a>
+          </article>
 
-            <!-- 3 -->
-            <article class="news-item">
-              <h2 class="news-section-title">
-                [순환 경제: 쓰레기에서 돈을 찾다]
-              </h2>
-              <p class="news-summary">
-                <img src="assets/image/star(sm-m).png" class="star-icon" />
-                <span class="highlight">#지속가능성</span>이 새로운 수익 모델
-              </p>
+          <!-- 3 -->
+          <article class="news-item">
+            <h2>[순환 경제: 쓰레기에서 돈을 찾다]</h2>
+            <p class="news-summary">
+              ✨ 관심 있으신 <span>#지속가능성</span> 가치가 새로운 수익 모델이
+              되고 있어요
+            </p>
 
-              <a href="detail-3.html" class="news-card">
-                <img src="assets/image/card3(sm).png" class="news-image" />
-                <div class="news-card-body">
-                  <h3 class="news-card-title">
-                    폐플라스틱, 도시광산으로 몰리는 기업들
-                  </h3>
-                  <p class="news-card-desc">
-                    단순 재활용이 아닙니다.<br />
-                    기업들이 몰리는 이유
-                  </p>
-                  <div class="tag-list">
-                    <span class="tag">#환경</span>
-                    <span class="tag">#신사업</span>
-                    <span class="tag">#순환경제</span>
-                  </div>
+            <a href="#" class="news-card">
+              <img src="assets/image/card3(sm).png" alt="" />
+              <div class="card-body">
+                <h3>폐플라스틱의 재발견, 도시광산으로 몰리는 기업들</h3>
+                <p>
+                  단순한 재활용이 아닙니다.<br />
+                  석유화학 업계가 폐플라스틱 열분해유에 사활을 거는 이유.
+                </p>
+                <div class="tag-list">
+                  <span>#환경 / ESG</span>
+                  <span>#신산업</span>
+                  <span>#순환경제</span>
                 </div>
-              </a>
-            </article>
+              </div>
+            </a>
+          </article>
 
-            <!-- 4 -->
-            <article class="news-item">
-              <h2 class="news-section-title">[그린 파이낸스]</h2>
-              <p class="news-summary">
-                <img src="assets/image/star(sm-m).png" class="star-icon" />
-                <span class="highlight">#재테크</span>와 친환경 흐름
-              </p>
+          <!-- 4 -->
+          <article class="news-item">
+            <h2>[그린 파이낸스: 금리와 환경의 관계]</h2>
+            <p class="news-summary">
+              ✨ <span>#재테크</span> 목표를 위해 금리 동결 시점의 친환경 섹터
+              흐름을 짚어드려요
+            </p>
 
-              <a href="detail-4.html" class="news-card">
-                <img src="assets/image/card4(sm).png" class="news-image" />
-                <div class="news-card-body">
-                  <h3 class="news-card-title">
-                    금리 동결, 친환경 섹터엔 훈풍?
-                  </h3>
-                  <p class="news-card-desc">태양광·풍력 시장 움직임 분석</p>
-                  <div class="tag-list">
-                    <span class="tag">#해외경제</span>
-                    <span class="tag">#미국증시</span>
-                    <span class="tag">#투자전략</span>
-                  </div>
+            <a href="#" class="news-card">
+              <img src="assets/image/card4(sm).png" alt="" />
+              <div class="card-body">
+                <h3>미국 금리 동결 기조, 친환경 섹터엔 ‘훈풍’일까?</h3>
+                <p>
+                  고금리에 주춤했던 태양광·풍력 프로젝트 재개 움직임.<br />
+                  나스닥 테크주와의 커플링 현상을 주목하세요.
+                </p>
+                <div class="tag-list">
+                  <span>#해외경제</span>
+                  <span>#미국증시</span>
+                  <span>#투자전략</span>
                 </div>
-              </a>
-            </article>
+              </div>
+            </a>
+          </article>
 
-            <!-- 5 -->
-            <article class="news-item">
-              <h2 class="news-section-title">[비건 비즈니스]</h2>
-              <p class="news-summary">
-                <img src="assets/image/star(sm-m).png" class="star-icon" />
-                <span class="highlight">#비건</span> 트렌드 분석
-              </p>
+          <!-- 5 -->
+          <article class="news-item">
+            <h2>[비건 비즈니스: 푸드테크의 미래]</h2>
+            <p class="news-summary">
+              ✨ 평소 눈여겨 보신 <span>#비건</span> 트렌드가 식품 산업의 표준이
+              되고 있습니다
+            </p>
 
-              <a href="detail-5.html" class="news-card">
-                <img src="assets/image/card5(sm).png" class="news-image" />
-                <div class="news-card-body">
-                  <h3 class="news-card-title">고기 없는 고기, 필수가 될까?</h3>
-                  <p class="news-card-desc">대체육 시장 성장 분석</p>
-                  <div class="tag-list">
-                    <span class="tag">#소비트렌드</span>
-                    <span class="tag">#푸드테크</span>
-                    <span class="tag">#ESG</span>
-                  </div>
+            <a href="#" class="news-card">
+              <img src="assets/image/card5(sm).png" alt="" />
+              <div class="card-body">
+                <h3>"고기 없는 고기" 시장, 단순 유행 넘어 필수로?</h3>
+                <p>
+                  글로벌 대체육 시장 규모 연평균 15% 성장 전망.<br />
+                  식품 업계의 비건 브랜드 런칭과 주가의 상관관계 분석.
+                </p>
+                <div class="tag-list">
+                  <span>#소비트렌드</span>
+                  <span>#푸드테크</span>
+                  <span>#ESG경영</span>
                 </div>
-              </a>
-            </article>
-          </section>
-        </main>
-      </div>
+              </div>
+            </a>
+          </article>
+        </section>
+      </main>
+
+      <nav class="bottom-nav">
+        <a href="home.html" class="nav-item active">
+          <img src="assets/icons/home.png" alt="" />
+          <span>홈</span>
+        </a>
+
+        <a href="mypage.html" class="nav-item">
+          <img src="assets/icons/my(g).png" alt="" />
+          <span>마이</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <img src="assets/icons/settinf(g).png" alt="" />
+          <span>설정</span>
+        </a>
+      </nav>
     </div>
   </body>
 </html>
