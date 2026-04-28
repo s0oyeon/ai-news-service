@@ -1,6 +1,7 @@
 .onboarding-page {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .onboarding-hero {
@@ -13,14 +14,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  margin-top: 28px;
+  margin-top: 0; /* 여기 28px 빼기 */
 }
 
 .onboarding-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 56px 24px 28px;
+  padding: 56px 24px 52px;
 }
 
 .onboarding-text h1 {
@@ -28,7 +29,7 @@
   font-weight: 700;
   line-height: 1.28;
   letter-spacing: -0.02em;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   word-break: keep-all;
 }
 
@@ -43,12 +44,10 @@
 
 .onboarding-button-group {
   margin-top: auto;
-  padding-top: 190px;
-  padding-bottom: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  min-height: calc(100vh - 188px);
+  padding-top: 40px;
 }
 
 @media (min-width: 768px) {
