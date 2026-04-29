@@ -231,68 +231,284 @@ img {
   background: #111;
 }
 
-.list-header {
+.stats-area {
+  margin-top: 48px;
+}
+
+.chart-card,
+.bar-card {
+  border-radius: 10px;
+  background: #fff;
+}
+
+.chart-card {
+  padding: 26px 22px 34px;
+}
+
+.chart-title {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.chart-desc {
+  margin-top: 10px;
+  color: #111;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.highlight {
+  color: #ff4b12;
+  font-weight: 700;
+}
+
+.donut-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.donut-chart {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#ff865f 0deg 166deg, #ffdfd5 166deg 360deg);
+  position: relative;
+}
+
+.donut-chart::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.donut-chart span {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.legend-list {
+  margin-top: 38px;
+  padding: 0 30px;
+}
+
+.legend-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 18px;
-  color: #999;
-  font-size: 15px;
 }
 
-.list-header button {
+.legend-row + .legend-row {
+  margin-top: 20px;
+}
+
+.legend-name {
   display: flex;
   align-items: center;
-  gap: 4px;
-  color: #999;
-  font-size: 12px;
+  gap: 10px;
 }
 
-.list-header button img {
+.legend-name strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.legend-color {
   width: 12px;
   height: 12px;
 }
 
-.article-list {
-  margin-top: 14px;
+.legend-color.economy {
+  background: #ff865f;
 }
 
-.article-item {
+.legend-color.environment {
+  background: #ffdfd5;
+}
+
+.legend-num {
   display: flex;
-  gap: 14px;
-  padding: 8px 0;
+  gap: 16px;
+  font-size: 13px;
 }
 
-.article-item img {
-  flex-shrink: 0;
-  width: 100px;
-  height: 58px;
-  border-radius: 6px;
-  object-fit: cover;
+/* 숫자만 주황 */
+.legend-num span em {
+  color: #ffa281;
+  font-style: normal;
+  font-weight: 700;
 }
 
-.article-item h3 {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.35;
-  letter-spacing: -0.04em;
-
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+/* '개'는 검정 */
+.legend-num span {
+  color: #111;
 }
 
-.article-item p {
-  margin-top: 8px;
+/* 퍼센트는 주황 유지 */
+.legend-num strong {
+  color: #ffa281;
+  font-weight: 700;
+}
+
+.section-line {
+  height: 1px;
+  margin: 26px 16px;
+  background: #fff;
+}
+
+.bar-card {
+  padding: 24px 18px 30px;
+}
+
+.chart-title span {
+  color: #ff4b12;
+}
+
+.small-label {
+  margin-top: 18px;
+  color: #c8c8c8;
+  font-size: 10px;
+}
+
+.avg-count {
+  margin-top: 4px;
   font-size: 12px;
-  line-height: 1.45;
-  color: #888;
-  letter-spacing: -0.04em;
+  color: #777;
+}
 
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.avg-count strong {
+  font-size: 24px;
+  color: #111;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 24px;
+  height: 170px;
+}
+
+.y-axis {
+  width: 24px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 8px;
+  color: #999;
+  font-size: 14px;
+  text-align: right;
+}
+
+.bars {
+  position: relative;
+  flex: 1;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 8px;
+}
+
+/* 점선 6줄 */
+.grid-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed #ececec;
+  z-index: 0;
+}
+
+.grid-line.l1 {
+  top: 0;
+}
+.grid-line.l2 {
+  top: 24px;
+}
+.grid-line.l3 {
+  top: 48px;
+}
+.grid-line.l4 {
+  top: 72px;
+}
+.grid-line.l5 {
+  top: 96px;
+}
+.grid-line.l6 {
+  top: 120px;
+}
+
+.bar-item {
+  position: relative;
+  z-index: 1;
+  width: 28px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  position: absolute;
+  bottom: 30px; /* 요일 글자랑 안 겹치게 */
+  width: 22px;
+  background: #ffdfd5;
+}
+
+.bar-fill {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #ff865f;
+}
+
+/* 전체 막대 높이: 5,4,5,3,4,5,2 */
+.total5 {
+  height: 120px;
+}
+.total4 {
+  height: 96px;
+}
+.total3 {
+  height: 72px;
+}
+.total2 {
+  height: 48px;
+}
+
+/* 진한 주황 부분 */
+.h1 {
+  height: 24px;
+}
+.h12 {
+  height: 36px;
+}
+.h2 {
+  height: 48px;
+}
+.h22 {
+  height: 54px;
+}
+.h32 {
+  height: 72px;
+}
+
+.bar-item p {
+  position: absolute;
+  bottom: 0;
+  font-size: 13px;
+  color: #777;
+  white-space: nowrap;
 }
 
 .bottom-nav {
@@ -319,7 +535,6 @@ img {
   gap: 4px;
   color: #999;
   font-size: 10px;
-  font-weight: 500;
 }
 
 .nav-item img {
@@ -335,46 +550,4 @@ img {
 
 .nav-item.active img {
   opacity: 1;
-}
-
-@media (min-width: 376px) and (max-width: 767px) {
-  .profile-section {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .subscribe-section {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .tab-section {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
-}
-
-@media (max-width: 374px) {
-  .profile-section {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .subscribe-section {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .tab-section {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .press-list {
-    gap: 12px;
-  }
-
-  .article-item img {
-    width: 92px;
-  }
 }
